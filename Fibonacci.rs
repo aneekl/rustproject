@@ -4,7 +4,7 @@ fn main() {
     // for int in 0..15 {
     //     println!("fibo ({}) => {}", int, fib(int))
     // }
-    loop {
+    'fibnum loop {
         println!("enter number");
 
         let mut fibnum = String::new();
@@ -20,7 +20,7 @@ fn main() {
 
         if fibnum <= 0 {
             println!("bad number bad bad");
-            break;
+            break 'fibnum;
         }
 
         println!("Fibonacci of {} is {}", fibnum, fib(fibnum));
